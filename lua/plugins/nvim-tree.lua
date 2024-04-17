@@ -11,7 +11,12 @@ return {
         },
 
         keys = {
-            { "<space>e", "<cmd>NvimTreeToggle<CR>", desc = "toggle file explorer" },
+            { "<space>e", "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>", desc = "toggle file explorer" },
+            {
+                "<space>E",
+                "<cmd>lua require('nvim-tree.api').tree.toggle({find_file=true, focus=true})<CR>",
+                desc = "toggle file explorer",
+            },
         },
 
         init = function()
