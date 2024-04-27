@@ -4,7 +4,8 @@ return {
         opts = function(_, opts)
             if string.find(vim.fn.system("uname -a"), "Android") ~= nil then
                 opts.servers.lua_ls.mason = false
-                opts.servers.ruff_lsp.mason = false
+                opts.servers.clangd.mason = false
+                opts.servers.ruff.mason = false
             end
         end,
     },
